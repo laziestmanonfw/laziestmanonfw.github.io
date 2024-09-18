@@ -1,0 +1,35 @@
+.game-card {
+    height: 100vh;
+    font-family: 'Open Sans', monospace;
+}
+
+.container {
+    background-color: rgb(61, 23, 23);
+    color: rgb(196, 196, 196);;
+    font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.card-header {
+    background-color: rgb(48, 22, 36);
+    color: rgb(196, 196, 196);;
+    font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.card-body {
+background-color: rgb(29, 54, 68);
+color: rgb(196, 196, 196);;
+font-size: 2rem;
+font-family: 'Times New Roman', Times, serif;
+}
+
+.card-footer {
+    background-color: rgb(62, 36, 85);
+    color: rgb(196, 196, 196);
+    font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+    }
+
+
+    
