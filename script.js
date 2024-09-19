@@ -1,5 +1,17 @@
 let minValue = parseInt(prompt('Минимальное знание числа для игры','0'));
 let maxValue = parseInt(prompt('Максимальное знание числа для игры','100'));
+if (Number.isNaN(minValue)){
+    minValue=-999;
+}
+if (Number.isNaN(maxValue)){
+    maxValue=999;
+}
+if (minValue < -999){
+    minValue=-999;
+}
+if (maxValue > 999){
+    maxValue=999;
+}
 alert(`Загадайте любое целое число от ${minValue} до ${maxValue}, а я его угадаю`);
 let answerNumber  = Math.floor((minValue + maxValue) / 2);
 let orderNumber = 1;
@@ -40,12 +52,12 @@ document.getElementById('btnOver').addEventListener('click', function () {
             answerNumber  = Math.floor((minValue + maxValue) / 2);
             orderNumber++;
             orderNumberField.innerText = orderNumber;
-        const answerRandom = Math.round( Math.random() *2);
+        const answerRandom = Math.floor( Math.random() *3);
         let text = ''; 
         if (answerRandom === 0) { 
             text = `Клянусь материнской платой, это число ${answerNumber}? `
         }
-        else if (innerRandom === 1) { 
+        else if (answerRandom === 1) { 
             text = `А может  ${answerNumber} ваше число?`
         } 
         else { 
@@ -58,7 +70,7 @@ document.getElementById('btnOver').addEventListener('click', function () {
 
 document.getElementById('btnEqual').addEventListener('click', function () {
     if (gameRun){
-        const innerRandom = Math.round( Math.random() *2);
+        const innerRandom = Math.floor( Math.random() *3);
         let text = ''; 
         if (innerRandom === 0) { 
             text = `Клянусь материнской платой, это число ${answerNumber} `
@@ -90,12 +102,12 @@ document.getElementById('btnLess').addEventListener('click', function () {
             answerNumber  = Math.floor((minValue + maxValue) / 2);
             orderNumber++;
             orderNumberField.innerText = orderNumber;
-            const answerRandom = Math.round( Math.random() *2);
+            const answerRandom = Math.floor( Math.random() *3);
         let text = ''; 
         if (answerRandom === 0) { 
             text = `Клянусь материнской платой, это число ${answerNumber}? `
         }
-        else if (innerRandom === 1) { 
+        else if (answerRandom === 1) { 
             text = `А может  ${answerNumber} ваше число?`
         } 
         else { 
@@ -109,25 +121,48 @@ document.getElementById('btnLess').addEventListener('click', function () {
 
 document.getElementById('btnRetry').addEventListener('click', function () {
     if (gameRun){
-        let minValue = parseInt(prompt('Минимальное знание числа для игры','0'));
-let maxValue = parseInt(prompt('Максимальное знание числа для игры','100'));
+ minValue = parseInt(prompt('Минимальное знание числа для игры','0'));
+ maxValue = parseInt(prompt('Максимальное знание числа для игры','100'));
+if (Number.isNaN(minValue)){
+    minValue=0;
+}
+if (Number.isNaN(maxValue)){
+    maxValue=100;
+}
+if (minValue < -999){
+    minValue=-999;
+}
+if (maxValue > 999){
+    maxValue=999;
+}
 alert(`Загадайте любое целое число от ${minValue} до ${maxValue}, а я его угадаю`);
-let answerNumber  = Math.floor((minValue + maxValue) / 2);
-let orderNumber = 1;
-let gameRun = true;
+answerNumber  = Math.floor((minValue + maxValue) / 2);
+orderNumber = 1;
+gameRun = true;
 }
 else {
-    let minValue = parseInt(prompt('Минимальное знание числа для игры','0'));
-let maxValue = parseInt(prompt('Максимальное знание числа для игры','100'));
+ minValue = parseInt(prompt('Минимальное знание числа для игры','0'));
+ maxValue = parseInt(prompt('Максимальное знание числа для игры','100'));
+if (Number.isNaN(minValue)){
+    minValue=-999;
+}
+if (Number.isNaN(maxValue)){
+    maxValue=999;
+}
+if (minValue < -999){
+    minValue=-999;
+}
+if (maxValue > 999){
+    maxValue=999;
+}
 alert(`Загадайте любое целое число от ${minValue} до ${maxValue}, а я его угадаю`);
 orderNumberField = 0;
 answerField = 0;
-let answerNumber  = Math.floor((minValue + maxValue) / 2);
-let orderNumber = 1;
-let gameRun = true;
+answerNumber  = Math.floor((minValue + maxValue) / 2);
+orderNumber = 1;
+gameRun = true;
 
 }
 })
 // кнопка заново
 
-//answerField.innerText = `Вы загадали число ${answerNumber }?`;
